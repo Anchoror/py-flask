@@ -1,8 +1,8 @@
-import token
 from flask import Blueprint, jsonify, request
 from app.services.auth_service import AuthService
 from app.services.user_service import UserService
 from flask_jwt_extended import jwt_required, get_jwt_identity
+from app.decorators import role_required
 
 main = Blueprint("main", __name__)
 

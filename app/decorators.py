@@ -1,4 +1,3 @@
-from pydoc import describe
 from flask_jwt_extended import get_jwt_identity, verify_jwt_in_request
 from flask import abort
 from app.models.user import User

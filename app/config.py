@@ -1,9 +1,10 @@
-from pickle import FALSE
+import logging
+import os
 
 
 class Config:
     DEBUG = False
-    TESTING = FALSE
+    TESTING = False
     SECRET_KEY = ""
     JWT_SECRET_KEY = "your-secret-key"
     JWT_ACCESS_TOKEN_EXPIRES = 3600

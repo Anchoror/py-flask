@@ -1,10 +1,8 @@
-[tool.project]
+[tool.poetry]
 name = "py-flask"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "tangjiacheng",email = "donquixote1110@outlook.com"}
-]
+authors = ["tangjiacheng <donquixote1110@outlook.com>"]
 readme = "README.md"
 
 

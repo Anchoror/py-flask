@@ -9,7 +9,7 @@ migrate = Migrate()
 
 
 def create_app(config_name):
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder="../static")
     app.config.from_object(config[config_name])
 
     # 初始化数据库

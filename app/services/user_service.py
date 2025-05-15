@@ -1,7 +1,7 @@
 from app.models.user import User
-from app import db, app
+from app import db
 from app.schemas.user_schema import UserSchema
-from flask import abort
+from flask import abort, current_app
 
 
 def validate_user_data(data, partial=False):
@@ -32,8 +32,8 @@ class UserService:
             db.session.add(user)
             db.session.commit()
             return user
-        except Expression as e:
-            app.logger.error(f"Error creating user: {str(e)}")
+        except Exception as e:
+            current_app.logger.error(f"Error creating user: {str(e)}")
             raise
 
     @staticmethod
